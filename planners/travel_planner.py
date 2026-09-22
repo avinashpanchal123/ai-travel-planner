@@ -6,9 +6,12 @@ class TravelPlanner:
     def __init__(self):
         self.ai = AIService()
 
-    def create_plan(self, destination, days, budget):
+    def create_plan(self, source, destination, days, budget):
 
         prompt = f"""Create a travel plan.
+
+        Source:
+        {source}
 
         Destination:
         {destination}
@@ -29,7 +32,7 @@ class TravelPlanner:
 
         4. Packing checklist
 
-        5. Budget saving tips
+        5. Budget for each day travel, food, and accommodation
 
         Format nicely.
         """

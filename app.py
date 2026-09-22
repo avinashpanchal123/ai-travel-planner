@@ -7,6 +7,10 @@ def main():
         "\n✈️ AI Travel Planner\n"
     )
 
+    source = input(
+        "Source: "
+    )
+
     destination = input(
         "Destination: "
     )
@@ -22,6 +26,7 @@ def main():
     planner = TravelPlanner()
 
     result = planner.create_plan(
+        source,
         destination,
         days,
         budget
